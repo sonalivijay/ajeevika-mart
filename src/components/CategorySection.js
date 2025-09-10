@@ -8,13 +8,25 @@ const categories = [
   { name: "Textiles", icon: <FaTshirt size={30} />, link: "/categories/textiles" },
   { name: "Agriculture", icon: <FaLeaf size={30} />, link: "/categories/agriculture" },
   { name: "Food Products", icon: <FaUtensils size={30} />, link: "/categories/food" },
+  { name: "Handicrafts", icon: <FaPaintBrush size={30} />, link: "/categories/handicrafts" },
+  { name: "Textiles", icon: <FaTshirt size={30} />, link: "/categories/textiles" },
+  { name: "Agriculture", icon: <FaLeaf size={30} />, link: "/categories/agriculture" },
+  { name: "Food Products", icon: <FaUtensils size={30} />, link: "/categories/food" },
 ];
 
 function CategorySection() {
   return (
     <section className="py-5 bg-light">
       <Container>
-        <h3 className="text-center fw-bold mb-4">Shop by Categories</h3>
+        {/* Heading + View All */}
+        <div className="d-flex justify-content-between align-items-center mb-4">
+          <h3 className="fw-bold m-0">Shop by Categories</h3>
+          <Link to="/categories" className="text-violet fw-semibold text-decoration-none">
+            View All →
+          </Link>
+        </div>
+
+        {/* Category Grid */}
         <Row className="g-4 justify-content-center">
           {categories.map((cat, idx) => (
             <Col key={idx} xs={6} md={3}>
