@@ -6,6 +6,7 @@ import Product from "./components/Product";
 import CategorySection from "./components/CategorySection";
 import AboutSection from "./components/AboutSection";
 import ProductCard from "./components/ProductCard";
+import Category from "./pages/Category";
 
 function App() {
   return (
@@ -27,18 +28,6 @@ function App() {
           <Layout>
             {/* <h2 className="p-5">About Us Page</h2> */}
             <AboutSection/>
-            {/* <Product /> */}
-
-            {/* <ProductCard
-              image="/assets/images/banner-2.jpg"
-              name="My Product"
-              price="₹49.99"
-            />
-            <ProductCard
-              image="/assets/images/banner-1.jpg"
-              name="My Product"
-              price="₹49.99"
-            /> */}
           </Layout>
         }
       />
@@ -67,6 +56,7 @@ function App() {
       <Route path="/login" element={<h2 className="p-5">Login Page</h2>} />
 
       <Route path="/product" element={<Product />} />
+      <Route path="/category" element={<Category />} />
 
     </Routes>
   );

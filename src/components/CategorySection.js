@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import { FaTshirt, FaLeaf, FaPaintBrush, FaUtensils } from "react-icons/fa"; // example icons
 
 const categories = [
-  { name: "Handicrafts", icon: <FaPaintBrush size={30} />, link: "/categories/handicrafts" },
-  { name: "Textiles", icon: <FaTshirt size={30} />, link: "/categories/textiles" },
-  { name: "Agriculture", icon: <FaLeaf size={30} />, link: "/categories/agriculture" },
-  { name: "Food Products", icon: <FaUtensils size={30} />, link: "/categories/food" },
-  { name: "Handicrafts", icon: <FaPaintBrush size={30} />, link: "/categories/handicrafts" },
-  { name: "Textiles", icon: <FaTshirt size={30} />, link: "/categories/textiles" },
-  { name: "Agriculture", icon: <FaLeaf size={30} />, link: "/categories/agriculture" },
-  { name: "Food Products", icon: <FaUtensils size={30} />, link: "/categories/food" },
+  { name: "Handicrafts", icon: <FaPaintBrush size={30} />, link: "/category" },
+  { name: "Textiles", icon: <FaTshirt size={30} />, link: "/category" },
+  { name: "Agriculture", icon: <FaLeaf size={30} />, link: "/category" },
+  { name: "Food Products", icon: <FaUtensils size={30} />, link: "/category" },
+  { name: "Handicrafts", icon: <FaPaintBrush size={30} />, link: "/category" },
+  { name: "Textiles", icon: <FaTshirt size={30} />, link: "/category" },
+  { name: "Agriculture", icon: <FaLeaf size={30} />, link: "/category" },
+  { name: "Food Products", icon: <FaUtensils size={30} />, link: "/category" },
 ];
 
 function CategorySection() {

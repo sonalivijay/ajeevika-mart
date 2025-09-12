@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 
+
 export default function ProductDescription() {
   const [productInfo, setProductInfo] = useState(null)
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     // Simulate API call
@@ -32,7 +34,11 @@ export default function ProductDescription() {
   }
 
   return (
+
+
+
     <div className="container my-5">
+
       <div>
         <div className="card-header bg-white text-primary">
           <h3 className="mb-0" style={{ color: '#6f42c1' }}>
@@ -55,7 +61,7 @@ export default function ProductDescription() {
                 <li
                   key={key}
                   className="d-flex justify-content-between align-items-center"
-                 
+
                 >
                   <span className="fw-semibold text-dark">{key}</span>
                   <span className="text-secondary">{value}</span>
@@ -67,8 +73,21 @@ export default function ProductDescription() {
             <button className="btn" style={{ backgroundColor: '#6f42c1', color: '#ffffff' }}>
               Add to Cart
             </button>
-            <button className="btn btn-outline-primary" style={{ borderColor: '#6f42c1', color: '#6f42c1' }}>
+            {/* <button className="btn btn-outline-primary" style={{ borderColor: '#6f42c1', color: '#6f42c1' }}>
               Buy Now
+            </button> */}
+            <button
+              className="btn btn-outline-primary"
+              style={{
+                borderColor: "#6f42c1",
+                backgroundColor: isHovered ? "#6f42c1" : "transparent",
+                color: isHovered ? "white" : "#6f42c1",
+                transition: "all 0.3s ease"
+              }}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              &#128722; Buy Now
             </button>
           </div>
         </div>

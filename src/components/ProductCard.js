@@ -1,8 +1,9 @@
-import React from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function ProductCard({ image, name, price }) {
     const navigate = useNavigate();
+    const [isHovered, setIsHovered] = useState(false);
 
     const handleViewProduct = () => {
         navigate(`/product`); // Navigate to ProductDetails component add id afterwards
@@ -22,9 +23,9 @@ export default function ProductCard({ image, name, price }) {
             }}
         >
             <img src={image} className="card-img-top img-fluid" alt={name} style={{
-            maxHeight: '100%',
-            objectFit: 'contain',
-          }}/>
+                maxHeight: '100%',
+                objectFit: 'contain',
+            }} />
             <div className="card-body text-center">
                 <h5 className="card-title">{name}</h5>
                 <p className="card-text text-muted">{price}</p>
@@ -39,13 +40,18 @@ export default function ProductCard({ image, name, price }) {
                 >
                     View Product
                 </button>
+               
                 <button
-                    className="btn btn-outline-primary"
+                    className="btn"
                     style={{
-                        borderColor: "#6f42c1",
-                        color: "#6f42c1",
+                        border: "1px solid #6f42c1",
+                        backgroundColor: isHovered ? "#6f42c1" : "transparent",
+                        color: isHovered ? "white" : "#6f42c1",
                         width: "100%",
+                        transition: "all 0.3s ease"
                     }}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
                 >
                     &#128722; Add to Cart
                 </button>

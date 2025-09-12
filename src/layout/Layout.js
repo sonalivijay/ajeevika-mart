@@ -10,7 +10,6 @@ function Layout({ children }) {
       <a href="#main-content" className="visually-hidden-focusable">
         Skip to main content
       </a>
-
       <TopBar />
       <NavBar />
 
